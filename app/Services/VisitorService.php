@@ -26,7 +26,7 @@ class VisitorService extends BaseService
     {
         try {
             $data = [
-                'ip' => $request->header('x-real-ip'),
+                'ip' => $request->header('x-real-ip', ''),
                 'url' => $request->get('url'),
                 'referer' => $request->get('referer'),
                 'device' => $request->get('device'),
