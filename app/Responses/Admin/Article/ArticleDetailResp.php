@@ -1,0 +1,46 @@
+<?php
+/**
+ * 文章详情响应类
+ * User: Woozee
+ * Date: 2020/12/1
+ * Time: 21:42
+ */
+
+namespace App\Responses\Admin\Article;
+
+use App\Responses\Admin\Category\CategoryInfo;
+use App\Responses\Admin\Label\LabelItem;
+use App\Responses\BaseResp;
+
+class ArticleDetailResp extends BaseResp
+{
+    /** @var int ID */
+    public int $id;
+
+    /** @var string 标题 */
+    public string $title;
+
+    /** @var string 内容 */
+    public string $content;
+
+    /** @var string 概要 */
+    public string $summary;
+
+    /** @var int 分类id */
+    public int $category_id;
+
+    /** @var string[] 关键词 */
+    public array $keyword_list;
+
+    /** @var LabelItem[] 标签 */
+    public array $label_list;
+
+    /** @var CategoryInfo 分类 */
+    public CategoryInfo $category;
+
+    /** @var string 创建时间 */
+    public string $created_at;
+
+    /** @var string 更新时间 */
+    public string $updated_at;
+}
